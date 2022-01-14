@@ -285,7 +285,7 @@ class FS_Env():
           if self.reward_type =='minPmean': reward_val*=-1
 
         if self.reward_type =='MaxPOr' or self.reward_type =='MinPOr':
-          reward_val = np.dot(self.POr_vec,np.mean(Pmat, axis =(1,2)))
+          reward_val = np.dot(self.POr_vec,np.mean(Pmat, axis =(1,2))) *20 
           print('reward_val is {}'.format(reward_val))
           if self.reward_type =='MinPOr': reward_val*=-1
         
